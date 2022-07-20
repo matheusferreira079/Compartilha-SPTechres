@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Login from '../views/Login.vue';
-import ToList from '../views/ToList.vue';
+import Mural from '../views/Mural.vue';
 
 const router: RouteRecordRaw[] = [
     {
@@ -9,9 +9,9 @@ const router: RouteRecordRaw[] = [
         component: Login
     },
     {
-        path: '/toList',
-        name: 'ToList',
-        component: ToList
+        path: '/mural',
+        name: 'Mural',
+        component: Mural
     }
 ];
 

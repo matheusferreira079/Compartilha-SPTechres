@@ -1,4 +1,5 @@
 <template>
+    <title>CS | Login</title>
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <main class="login">
@@ -13,6 +14,7 @@
             </form>
         </div>
     </main>
+    <p style="text-align: justify;"></p>
 </template>
 
 <script>
@@ -31,22 +33,18 @@ export default {
     methods: {
         login() {
             if (this.form.email === 'admin@admin.com' && this.form.senha === 'admin') {
-                Swal.fire({
-                    title: "Bem-vindo de volta!",
-                    icon: 'success',
-                    iconColor: 'white',
-                    toast: true,
-                    position: "bottom-right",
-                    timer: 5000,
-                    timerProgressBar: true,
-                    showConfirmButton: false,
-                    customClass: {
-                        popup: 'colored-toast'
-                    }
-                });
                 this.form.email = "";
                 this.form.senha = "";
-                this.$router.push({name: 'ToList'})
+                this.$router.push({ name: 'Mural' })
+                Swal.fire({
+                    title: 'Bem-vindo Sptecher! 🙋🏻‍♂️',
+                    html: 'Olá Sptecher, como vai? <br><hr>Compartilhe aqui seus projetos acadêmicos/pessoais, para que outros Sptechers tenham acesso!',
+                    imageUrl: '/img/logo.1c6a5565.png',
+                    imageWidth: 150,
+                    imageAlt: 'Logo Compartilha SPTECHers',
+                    confirmButtonText: 'Vamos lá!',
+                    confirmButtonColor: '#ED145B'
+                })
             } else {
                 Swal.fire({
                     title: "Usuário e/ou senha inválidos!",
@@ -145,14 +143,14 @@ export default {
 }
 
 .colored-toast.swal2-icon-success {
-  background-color: #99e26f !important;
+    background-color: #99e26f !important;
 }
 
 .colored-toast.swal2-icon-error {
-  background-color: #f27474 !important;
+    background-color: #f27474 !important;
 }
 
 .colored-toast .swal2-title {
-  color: white;
+    color: white;
 }
 </style>

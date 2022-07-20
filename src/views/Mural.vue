@@ -1,4 +1,5 @@
 <template>
+  <title>CS | Mural</title>
   <header>
     <nav class="navbar has-shadow topo__color">
       <img class="img__logo" src="../assets/logo.png" alt="">
@@ -27,7 +28,7 @@ import IPostagens from '../interfaces/IPostagens'
 import Box from '../components/Box.vue';
 
 export default defineComponent({
-  name: "ToList",
+  name: "Mural",
   components: {
     Formulario,
     Card,
