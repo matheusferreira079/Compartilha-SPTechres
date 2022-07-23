@@ -1,6 +1,6 @@
 <template>
     <div class="is-flex is-align-items-center is-justify-content-space-between">
-        <button class="button" @click="salvar" :disabled="cronometroRodando">
+        <button class="button" @click="salvar">
             <span class="icon">
                 <i class="fas fa-save"></i>
             </span>
@@ -16,13 +16,6 @@ export default defineComponent({
     name: "ButtonSave",
     emits: ['aoFinalizar'],
     components: {
-    },
-    data() {
-        return {
-            tempoEmSegundos: 0,
-            cronometro: 0,
-            cronometroRodando: false
-        };
     },
     methods: {
         salvar() {

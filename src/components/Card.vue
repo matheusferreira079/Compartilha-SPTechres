@@ -3,16 +3,16 @@
         <div class="columns">
             <div class="column is-2 display">
                 <h4 class="title__informs">Título:</h4>
-                {{ tarefa.titulo || "Tarefa sem descrição" }}
+                {{ tarefa.titulo }}
             </div>
             <div class="column is-7 display">
                 <h4 class="title__informs">Descrição:</h4>
-                {{ tarefa.descricao || "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo natus, amet animi nulla esse totam ipsa earum fugiat illum debitis harum voluptatum a laudantium fugit similique, hic iurearchitecto!"}}
+                {{ tarefa.descricao }}
             </div>
             <div class="column is-3 display">
-                <span class="title__informs">Link GitHub: </span>{{ tarefa.github || "Lorem ipsum dolor sit amet consectetur"}}
+                <span class="title__informs">Link GitHub: </span>{{ tarefa.github }}
                 <hr>
-                <span class="title__informs">Autor: </span> Matheus Mattos              
+                <span class="title__informs">Autor: </span> Administrador              
             </div>
         </div>
     </Box>

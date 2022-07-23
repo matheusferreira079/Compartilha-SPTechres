@@ -35,7 +35,7 @@ export default {
             if (this.form.email === 'admin@admin.com' && this.form.senha === 'admin') {
                 this.form.email = "";
                 this.form.senha = "";
-                this.$router.push({ name: 'Mural' })
+                this.$router.push({ name: 'Principal' })
                 Swal.fire({
                     title: 'Bem-vindo Sptecher! 🙋🏻‍♂️',
                     html: 'Olá Sptecher, como vai? <br><hr>Compartilhe aqui seus projetos acadêmicos/pessoais, para que outros Sptechers tenham acesso!',

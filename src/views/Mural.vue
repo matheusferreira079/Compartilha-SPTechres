@@ -1,11 +1,7 @@
 <template>
   <title>CS | Mural</title>
-  <header>
-    <nav class="navbar has-shadow topo__color">
-      <img class="img__logo" src="../assets/logo.png" alt="">
-    </nav>
-  </header>
-  <main class="columns is-gapless is-multiline" :class="{ 'modo-escuro': modoEscuroAtivo }">
+  <Cabecalho />
+  <main class="columns is-gapless is-multiline">
     <div class="column is-three-quarter conteudo">
       <Formulario @aoSalvarPostagem="salvarPostagem" />
       <div class="lista">
@@ -26,18 +22,19 @@ import Formulario from '../components/Formulario.vue';
 import Card from '../components/Card.vue';
 import IPostagens from '../interfaces/IPostagens'
 import Box from '../components/Box.vue';
+import Cabecalho from '../components/Cabecalho.vue';
 
 export default defineComponent({
   name: "Mural",
   components: {
     Formulario,
     Card,
-    Box
+    Box,
+    Cabecalho
   },
   data() {
     return {
-      tarefas: [] as IPostagens[],
-      modoEscuroAtivo: false
+      tarefas: [] as IPostagens[]
     }
   },
   computed: {
@@ -48,9 +45,6 @@ export default defineComponent({
   methods: {
     salvarPostagem(tarefa: IPostagens) {
       this.tarefas.push(tarefa)
-    },
-    trocarTema(modoEscuroAtivo: boolean) {
-      this.modoEscuroAtivo = modoEscuroAtivo
     }
   }
 });
@@ -73,11 +67,6 @@ export default defineComponent({
 main {
   --bg-primario: #fff;
   --texto-primario: #000;
-}
-
-main.modo-escuro {
-  --bg-primario: #1F2A44;
-  --texto-primario: #fff;
 }
 
 .conteudo {
