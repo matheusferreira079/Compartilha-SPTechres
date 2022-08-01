@@ -5,7 +5,7 @@
     <div class="column is-three-quarter conteudo">
       <Formulario @aoSalvarPostagem="salvarPostagem" />
       <div class="lista">
-        <Card v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" />
+        <Card v-for="(postagem, index) in postagens" :key="index" :postagem="postagem" />
         <Box v-if="listaEstaVazia">
           <div class="div__sem-mensagem">
             <span class="text-negado">Nenhuma Postagem Realizada</span>
@@ -34,17 +34,17 @@ export default defineComponent({
   },
   data() {
     return {
-      tarefas: [] as IPostagens[]
+      postagens: [] as IPostagens[]
     }
   },
   computed: {
     listaEstaVazia(): boolean {
-      return this.tarefas.length === 0
+      return this.postagens.length === 0
     }
   },
   methods: {
-    salvarPostagem(tarefa: IPostagens) {
-      this.tarefas.push(tarefa)
+    salvarPostagem(postagem: IPostagens) {
+      this.postagens.push(postagem)
     }
   }
 });

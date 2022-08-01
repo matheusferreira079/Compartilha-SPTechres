@@ -3,14 +3,14 @@
         <div class="columns">
             <div class="column is-2 display">
                 <h4 class="title__informs">Título:</h4>
-                {{ tarefa.titulo }}
+                {{ postagem.titulo }}
             </div>
             <div class="column is-7 display">
                 <h4 class="title__informs">Descrição:</h4>
-                {{ tarefa.descricao }}
+                {{ postagem.descricao }}
             </div>
             <div class="column is-3 display">
-                <span class="title__informs">Link GitHub: </span>{{ tarefa.github }}
+                <span class="title__informs">Link GitHub: </span>{{ postagem.github }}
                 <hr>
                 <span class="title__informs">Autor: </span> Administrador              
             </div>
@@ -29,7 +29,7 @@ export default defineComponent({
         Box
     },
     props: {
-        tarefa: {
+        postagem: {
             type: Object as PropType<IPostagens>,
             required: true
         }
